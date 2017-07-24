@@ -1,0 +1,38 @@
+div h1 {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	height: 100px;
+	margin-top: 20px;
+}
+
+.flex-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 70%;
+	margin: auto;
+	align-items: flex-start;
+	background-color: grey;
+
+}
+
+.flex-item {
+	margin: auto;
+	background: orange;
+}
+
+.item {
+	text-align: center;
+
+
+}
+
+.inline {
+	display: inline-flex;
+	text-align: center;
+	margin: auto;
+	background-color: white;
+}
+
