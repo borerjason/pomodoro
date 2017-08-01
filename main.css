@@ -1,9 +1,8 @@
-div h1 {
+h1 {
 	margin: auto;
-	width: 50%;
 	text-align: center;
 	height: 100px;
-	margin-top: 20px;
+	margin-top: 40px;
 }
 
 .flex-container {
@@ -33,6 +32,16 @@ div h1 {
 	display: inline-flex;
 	text-align: center;
 	margin: auto;
-	background-color: white;
+	width:100%;
+}
+
+.center{
+	margin: auto;
+}
+
+.breakTime{
+	margin-left: -40px;
+	margin-right: -40px;
+	font-size: x-large;
 }
 
