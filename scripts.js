@@ -1,16 +1,34 @@
 $(document).ready(function(){
 
+	var breakTime = 5;
+	var sessionTime = 25;
 
-	$("#minusBreak").click(subtract);
+	$("#minusBreak").click(function(){
+		if(breakTime > 1){
+		breakTime--;
+		}
+		$('.breakTime').html(breakTime);
+	});
 
+	$("#plusBreak").click(function(){
+		if(breakTime < 20){
+		breakTime++;
+		}
+		$(".breakTime").html(breakTime);
+	});
 
+	$("#minusSession").click(function(){
+		if(sessionTime > 1){
+			sessionTime--;
+		}
+		$(".sessionTime").html(sessionTime);
+	});
+
+	$("#plusSession").click(function(){
+		if(sessionTime < 60){
+			sessionTime++;
+		}
+		$(".sessionTime").html(sessionTime)
+	});
 
 });
-
-function subtract(){
-	// take the number value in html and subtract one 
-	// if I click the ID #minusBreak then the class .breakTime should go down by one
-	var $jqbreakTime = #('.breakTime')
-	$jqbreakTime --;
-	$('breakTime').html($jqbreakTime);
-};
