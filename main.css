@@ -79,3 +79,27 @@ h2 {
 	line-height: 50px;
 }
 
+#title {
+	font-size: 150%;
+}
+
+.clock:hover {
+	cursor: pointer;
+}
+
+.controls {
+	margin: 20px;
+}
+
+#start {
+	background-color: green;
+}
+
+#stop {
+	background-color: red;
+}
+
+#reset {
+	background-color: grey;
+}
+
