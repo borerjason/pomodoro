@@ -14,6 +14,8 @@ $(document).ready(function(){
 		}
 		if(countingDown === false && $("#title").text() === "Break"){
 			$("#clockTime").html(breakTime + ":00");
+			minutes = breakTime;
+			seconds = 0;
 		}
 	});
 
@@ -24,6 +26,8 @@ $(document).ready(function(){
 		}
 		if(countingDown === false && $("#title").text() === "Break"){
 			$("#clockTime").html(breakTime + ":00");
+			minutes = breakTime;
+			seconds = 0;
 		}
 	});
 
@@ -34,6 +38,8 @@ $(document).ready(function(){
 		}
 		if(countingDown === false && $("#title").text() === "Session"){
 			$("#clockTime").html(sessionTime + ":00");
+			minutes = sessionTime;
+			seconds = 0;
 		}
 	});
 
@@ -44,6 +50,22 @@ $(document).ready(function(){
 		}
 		if(countingDown === false && $("#title").text() === "Session"){
 			$("#clockTime").html(sessionTime + ":00");
+			minutes = sessionTime;
+			seconds = 0;
+		}
+	});
+
+	$("#title").click(function(){
+		if(countingDown === false && $("#title").text() === "Session"){
+			$("#title").html("Break");
+			$("#clockTime").html(breakTime + ":00");
+			minutes = breakTime;
+			seconds = 0;
+		} else if(countingDown === false && $("#title").text() === "Break" ){
+			$("#title").html("Session");
+			$("#clockTime").html(sessionTime + ":00");
+			minutes = sessionTime;
+			seconds = 0;
 		}
 	});
 
@@ -59,7 +81,7 @@ $(document).ready(function(){
 	});
 
 	$("#reset").click(function(){
-		countingDown = false;
+		//countingDown = false;
 		if($("#title").text() === "Session"){
 			minutes = sessionTime; 
 			seconds = 0;
@@ -67,6 +89,7 @@ $(document).ready(function(){
 		} else{
 			minutes = breakTime;
 			seconds = 0;
+			$("#clockTime").html(breakTime + ":00")
 		}
 	});
 

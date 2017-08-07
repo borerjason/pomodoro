@@ -5,10 +5,11 @@ html body {
 body h1 {
 	margin: auto;
 	text-align: center;
-	height: 100px;
+	height: 50px;
 	margin-top: 30px;
-	font-family: verdana, sans-serif;
-	color: grey;
+	font-weight: 100;
+	font-family: Impact;
+	
 }
 
 .flex-container {
@@ -19,17 +20,15 @@ body h1 {
 	width: 70%;
 	margin: auto;
 	align-items: flex-start;
-	
-
 }
 
 .flex-item {
 	margin: auto;
-	
 }
 
 .item {
 	text-align: center;
+	font-weight: 200;
 }
 
 .inline {
@@ -72,7 +71,7 @@ button:hover {
 
 .clock {
 	display: block;	
-	height: 100px;
+
 	width: 400px;
 	margin-top: 50px;
 	text-align: center;
@@ -80,30 +79,41 @@ button:hover {
 
 #clockTime {
 	line-height: 50px;
-	font-size: 400%;
+	font-size: 600%;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	font-weight: 200;
 }
 
 #title {
-	font-size: 150%;
-}
-
-.clock:hover {
+	
 	cursor: pointer;
+	font-weight: 200;
 }
 
 .controls {
 	margin: 20px;
 }
 
+.length {
+	margin-top: 40px;
+}
+
 #start {
-	background-color: green;
+	background-color: #5d9451;
+	border-radius: 10px;
+	font-weight: 200;
 }
 
 #stop {
-	background-color: red;
+	background-color: #e74c3c;
+	border-radius: 10px;
+	font-weight: 200;
 }
 
 #reset {
-	background-color: grey;
+	background-color: #bdc3c7;
+	border-radius: 10px;
+	font-weight: 200;
 }
 
