@@ -17,6 +17,7 @@
       audio.play();
       }
    
+   // when minutes and seconds get to zero, change the title from 'session' to 'break' and set time to break time
    if(minutes === 0 && seconds === 0){
       if($('.title').text() === 'Session'){
         $('.title').text('Break');
@@ -24,6 +25,7 @@
         $('.timer').html(minutes + ":0" + seconds);
       }
       
+      // if title was break, then change it back to 'session'
       else if($('.title').text() === 'Break'){
         $('.title').text('Session');
         minutes = countTime;
@@ -31,9 +33,14 @@
       }
    }
    else{
-      if(seconds === 0){seconds = 60; minutes--}
+      if(seconds === 0){
+        seconds = 60; 
+        minutes--;
+      }
       seconds--;
-      if(seconds < 10){$('.timer').html(minutes + ":0" + seconds);}
+      if(seconds < 10){
+        $('.timer').html(minutes + ":0" + seconds);
+      }
       else{
       $('.timer').html(minutes + ":" + seconds);
       }

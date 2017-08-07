@@ -9,16 +9,22 @@ $(document).ready(function(){
 
 	$("#minusBreak").click(function(){
 		if(breakTime > 1){
-		breakTime--;
+			breakTime--;
+			$('.breakTime').html(breakTime);
 		}
-		$('.breakTime').html(breakTime);
+		if(countingDown === false && $("#title").text() === "Break"){
+			$("#clockTime").html(breakTime + ":00");
+		}
 	});
 
 	$("#plusBreak").click(function(){
 		if(breakTime < 20){
-		breakTime++;
+			breakTime++;
+			$(".breakTime").html(breakTime);
 		}
-		$(".breakTime").html(breakTime);
+		if(countingDown === false && $("#title").text() === "Break"){
+			$("#clockTime").html(breakTime + ":00");
+		}
 	});
 
 	$("#minusSession").click(function(){
@@ -27,7 +33,7 @@ $(document).ready(function(){
 			$(".sessionTime").html(sessionTime);
 		}
 		if(countingDown === false && $("#title").text() === "Session"){
-			$("#clockTime").html(sessionTime + ":00")
+			$("#clockTime").html(sessionTime + ":00");
 		}
 	});
 
@@ -37,23 +43,35 @@ $(document).ready(function(){
 			$(".sessionTime").html(sessionTime);
 		}
 		if(countingDown === false && $("#title").text() === "Session"){
-			$("#clockTime").html(sessionTime + ":00")
+			$("#clockTime").html(sessionTime + ":00");
 		}
 	});
 
-	$(".clock").click(function(){
+	$("#start").click(function(){
 		if(countingDown === false){
 			countingDown = true;
+			countdown();
 		}
-		 else {
-			countingDown = false;
-			}
-		countdown();
+	});
+
+	$("#stop").click(function(){
+		countingDown = false;
+	});
+
+	$("#reset").click(function(){
+		countingDown = false;
+		if($("#title").text() === "Session"){
+			minutes = sessionTime; 
+			seconds = 0;
+			$("#clockTime").html(sessionTime + ":00")
+		} else{
+			minutes = breakTime;
+			seconds = 0;
+		}
 	});
 
 
 	function countdown(){
-		// check if session time or break time
 		if(seconds === 0 && minutes === 0){
 			if($("#title").text() === "Session"){
 				$("#title").html("Break");
@@ -63,8 +81,6 @@ $(document).ready(function(){
 				minutes = sessionTime;
 			}
 		} 
-		// for countdown use appropriate time
-
 		if(countingDown === true){
 			if(seconds === 0){
 				minutes--;

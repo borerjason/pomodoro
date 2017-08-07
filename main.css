@@ -1,8 +1,14 @@
-h1 {
+html body {
+	background-color: white;
+}
+
+body h1 {
 	margin: auto;
 	text-align: center;
 	height: 100px;
-	margin-top: 40px;
+	margin-top: 30px;
+	font-family: verdana, sans-serif;
+	color: grey;
 }
 
 .flex-container {
@@ -13,13 +19,13 @@ h1 {
 	width: 70%;
 	margin: auto;
 	align-items: flex-start;
-	background-color: grey;
+	
 
 }
 
 .flex-item {
 	margin: auto;
-	background: orange;
+	
 }
 
 .item {
@@ -68,15 +74,13 @@ button:hover {
 	display: block;	
 	height: 100px;
 	width: 400px;
-	border-style: solid;
-	border-color: green;
 	margin-top: 50px;
-	background-color: purple;
 	text-align: center;
 }
 
-h2 {
+#clockTime {
 	line-height: 50px;
+	font-size: 400%;
 }
 
 #title {
