@@ -9,7 +9,6 @@ body h1 {
 	margin-top: 30px;
 	font-weight: 100;
 	font-family: Impact;
-	
 }
 
 .flex-container {
@@ -60,14 +59,14 @@ button {
     outline: 0;
 }
 
-button:focus {
-	border: 0;
-    outline: 0;
+div button:focus {
+    outline: none;
 }
 
 button:hover {
 	cursor: pointer;
 }
+
 
 .clock {
 	display: block;	
@@ -116,4 +115,20 @@ button:hover {
 	border-radius: 10px;
 	font-weight: 200;
 }
+
+#start:active {
+    position:relative;
+    top:2px;
+
+}
+
+#stop:active {
+    position:relative;
+    top:2px;
+}
+#reset:active {
+    position:relative;
+    top:2px;
+}
+
 
